@@ -41,7 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Frontend',
+    'tailwind',
+    'theme',
+
 ]
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = ['192.168.14.58']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,6 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Project.wsgi.application'
 
+NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd"
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
