@@ -1,0 +1,187 @@
+/* ✅ General Styling */
+body {
+  padding-top: 80px; /* Prevents navbar overlap */
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ Navbar */
+/* ✅ General Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1e40af;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ✅ Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* ✅ Navigation Menu (Default: Horizontal) */
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+#menu li a {
+  color: white;
+
+  text-decoration:solids;
+  font-size: 1rem;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+#menu li a:hover {
+  color: #d1d5db;
+}
+
+/* ✅ Mobile Menu Button (Hidden by Default) */
+.mobile-menu-btn {
+  display: none;
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/* ✅ Responsive for Mobile Screens */
+@media screen and (max-width: 768px) {
+  .mobile-menu-btn {
+      display: block; /* Show ☰ button */
+  }
+
+  #menu {
+      display: none; /* Hide menu by default */
+      flex-direction: column;
+      background: #2563eb;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      text-align: center;
+      padding: 10px;
+  }
+
+  #menu.active {
+      display: flex; /* Show when toggled */
+  }
+}
+
+
+
+/* ✅ Main Content */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.courses ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.courses li {
+  background: #2563eb;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Style for the content section */
+.content {
+  text-align: center;
+  margin-top: 120px; /* Push content below navbar */
+  padding: 20px;
+}
+
+/* Larger, bold heading */
+.content h1 {
+  font-size: 3rem;  /* Adjust size as needed */
+  font-weight: bold;
+  color: #1e40af;  /* Dark blue */
+}
+
+/* Responsive Scaling */
+@media screen and (max-width: 768px) {
+  .content h1 {
+      font-size: 2.5rem; /* Slightly smaller for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content h1 {
+      font-size: 2rem; /* Even smaller for very small screens */
+  }
+}
+
+
+/* ✅ Modal */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.modal-buttons button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background: gray;
+  color: white;
+}
+
+.modal-buttons button:last-child {
+  background: #2563eb;
+  color: white;
+}
