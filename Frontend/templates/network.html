@@ -1,0 +1,57 @@
+{% load static tailwind_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Networking Events</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% tailwind_css %}
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100 m-0 p-0">
+
+    <!-- ✅ HEADER -->
+    <header class="bg-blue-600 text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <a href="{% url 'home' %}" class="text-2xl font-bold">EmpowerWomen</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="{% url 'home' %}" class="hover:text-gray-200">Home</a></li>
+                    <li><a href="{% url 'learning_page' %}" class="hover:text-gray-200">Learning</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ NETWORKING EVENTS -->
+    <main class="container mx-auto px-6 py-10">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Networking Events</h1>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 🎉 Event 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-4">
+                <img src="{% static 'images/sports.jpg' %}" alt="Event 1" class="w-full h-40 object-cover rounded-lg">
+                <h2 class="text-xl font-bold mt-3">Women's Forum</h2>
+                <p class="text-gray-600"><strong>Date:</strong> Mar 29 | 10:00 AM(IST)</p>
+                <p class="text-gray-600"><strong>Venue:</strong> Sivanchetti Gardens, Bengaluru</p>
+                <p class="text-gray-700 mt-2">Inspired talk and speed dating for women's.</p>
+                <a href="https://www.townscript.com/v2/e/womens-forum-321034/booking/tickets" class="mt-3 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Register</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ✅ FOOTER -->
+    <footer class="bg-gray-900 text-white py-6 mt-auto">
+        <div class="container mx-auto text-center">
+            <p class="text-lg font-semibold">EmpowerWomen © 2025 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

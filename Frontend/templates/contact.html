@@ -1,0 +1,71 @@
+{% load static tailwind_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us - Team Info</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="{% static './css/styles.css' %}">
+    {% tailwind_css %}
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100 m-0 p-0">
+
+
+    <!-- ✅ HEADER -->
+    <header class="bg-blue-600 text-white py-4 shadow-md m-0 p-0">
+      <div class="container mx-auto flex justify-between items-center px-6">
+          <a href="{% url 'home' %}" class="text-2xl font-bold">EmpowerWomen</a>
+          <nav>
+              <ul class="flex space-x-6">
+                  <li><a href="{% url 'home' %}" class="hover:text-gray-200">Home</a></li>
+                  <li><a href="{% url 'learning_page' %}" class="hover:text-gray-200">Learning</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  
+
+    <!-- ✅ CONTACT SECTION -->
+    <main class="flex-1 container mx-auto px-6 py-10">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Contact Our Team</h1>
+
+        <!-- Team Lead Section -->
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-blue-700">Team Lead</h2>
+            <div class="mt-4">
+                <p><strong>Name:</strong> Nagraj P</p>
+                <p><strong>USN:</strong> 1RN22CS095</p>
+                <p><strong>Email:</strong> 1rn22cs095.nagrajp@rnsit.ac.in</p>
+            </div>
+        </div>
+
+        <!-- Team Members Section -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold text-blue-700">Team Members</h2>
+            <div class="mt-4">
+                <ul class="divide-y divide-gray-300">
+                    <li class="py-3">
+                        <p><strong>Name:</strong> Mohith B</p>
+                        <p><strong>USN:</strong>1RN22CS092</p>
+                        <p><strong>Email:</strong> 1rn22cs092.mohithb@rnsit.ac.in</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- ✅ FOOTER -->
+    <footer class="bg-gray-900 text-white py-6 mt-auto">
+        <div class="container mx-auto text-center">
+            <p class="text-lg font-semibold">EmpowerWomen © 2025 | All Rights Reserved</p>
+            <a href="{% url 'contact' %}" class="hover:text-gray-400">Contact Us</a>
+        </div>
+    </footer>
+
+</body>
+</html>

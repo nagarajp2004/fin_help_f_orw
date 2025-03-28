@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Project.views import *
+from Project import views
 
 # urlpatterns = [
 #     path('admin/', admin.site.urls),
@@ -26,7 +26,12 @@ from Project.views import *
 
 
 urlpatterns = [
-     path('admin/', admin.site.urls),
-    path('', frontend_view, name='frontend'),
+    path('admin/', admin.site.urls),
+    path('', views.home, name='home'),  # Define home route
+    path('', views.frontend_view, name='frontend'),
+    path('learning/', views.learning_page, name='learning_page'),
+    path('contact/', views.contact, name='contact'),
+    path('networking/', views.network, name='network'),
+
     
 ]

@@ -31,6 +31,15 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+# URL prefix for static files (Django will look here)
+STATIC_URL = '/static/'
+
+# Define the directory where static files are collected
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),  # Ensures Django finds /static/ folder in the root project
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,7 +52,6 @@ INSTALLED_APPS = [
     'Frontend',
     'tailwind',
     'theme',
-
 ]
 
 TAILWIND_APP_NAME = 'theme'
