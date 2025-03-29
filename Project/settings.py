@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'Frontend',
     'tailwind',
     'theme',
+    
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -93,12 +94,22 @@ NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+# DATABASES={
+#     'default':{
+#         'ENGINE':'django.db.backends.mysql',
+#         'NAME':'WomenEmpowerment',
+#         'USER':'root',
+#         'PASSWORD':'12345678',
+#         'PORT':3306,
+#         'HOST':'localhost'
+#     }
+# }
 
 
 # Password validation
