@@ -1,0 +1,96 @@
+{% load static tailwind_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Start Learning</title>
+
+    <!-- Tailwind CSS -->
+    {% tailwind_css %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <nav>
+        <div class="container">
+            <button><a href="{% url 'home' %}" class="logo">Home</a></button>
+        </div>
+    </nav>
+</header>
+
+<main class="container mx-auto p-6">
+    <div class="content">
+        <h1 class="text-3xl font-bold mb-4">Welcome to the Learning Page</h1>
+        <p>Explore courses and start your journey.</p>
+    </div>
+
+    <!-- ✅ Latest Finance Courses Section -->
+    <div class="finance-courses mt-8">
+        <h2 class="text-2xl font-bold mb-4">Latest Finance Courses</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Course 1 -->
+            <div class="border p-4 rounded-lg shadow-md bg-white">
+                <a href="https://iimbx.iimb.ac.in/introduction-to-investments/" target="_blank">
+                    <img src="{% static 'images/Intro_to_investment.png' %}" alt="Introduction to Investments" class="w-full h-40 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </a>
+                <h3 class="text-lg font-semibold mt-2">Introduction to Investments</h3>
+                <p>This IIMBx course is designed to help learners understand the key terms and concepts used in equity markets and security valuation.</p>
+                <p><strong>Duration:</strong> 5 Weeks</p>
+                <p><strong>Creator:</strong> Prof. S J Badrinath</p>
+                <a href="https://iimbx.iimb.ac.in/introduction-to-investments/" target="_blank" class="mt-3 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Course</a>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="border p-4 rounded-lg shadow-md bg-white">
+                <a href="https://www.coursera.org/learn/trading-basics?msockid=3bca516d63e86b5a0a39454962ad6a2c#outcomes" target="_blank">
+                    <img src="{% static 'images/trading_basics.png' %}" alt="Trading Basics" class="w-full h-40 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </a>
+                <h3 class="text-lg font-semibold mt-2">Trading Basics</h3>
+                <p>This course is part of the Trading Strategies in Emerging Markets Specialization.</p><br>
+                <p><strong>Duration:</strong> 8 hrs</p>
+                <p><strong>Creator:</strong> Ramabhadran Thirumalai</p>
+                <a href="https://www.coursera.org/learn/trading-basics?msockid=3bca516d63e86b5a0a39454962ad6a2c#outcomes" target="_blank" class="mt-3 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Course</a>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="border p-4 rounded-lg shadow-md bg-white">
+                <a href="https://www.coursera.org/learn/financial-markets-global" target="_blank">
+                    <img src="{% static 'images/Financial_Markets.png' %}" alt="Financial Markets" class="w-full h-40 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </a>
+                <h3 class="text-lg font-semibold mt-2">Financial Markets</h3>
+                <p>An overview of the ideas, methods, and institutions that permit human society to manage risks and foster enterprise. </p>
+                <p><strong>Duration:</strong> 3 weeks</p>
+                
+                <p><strong>Instructor:</strong>Robert Shiller</p>
+                <a href="https://www.coursera.org/learn/financial-markets-global" target="_blank" class="mt-3 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Course</a>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="border p-4 rounded-lg shadow-md bg-white">
+                <a href="https://iimbx.iimb.ac.in/catalog/introduction-to-banking-financial-markets/#" target="_blank">
+                    <img src="{% static 'images/Intro_to_Banking.png' %}" alt="Introduction to Banking and Financial Markets" class="w-full h-40 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
+                </a>
+                <h3 class="text-lg font-semibold mt-2">Introduction to Banking and Financial Markets</h3>
+                <p>Introduces learners to the dynamics of Banking and Financial Markets, related institutions, mechanisms, and processes</p>
+                <p><strong>Duration:</strong> 5 Weeks</p>
+                <p><strong>Instructor:</strong> Prof. PC Narayan(IIMB)</p>
+                <a href="https://iimbx.iimb.ac.in/catalog/introduction-to-banking-financial-markets/#" target="_blank" class="mt-3 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Course</a>
+            </div>
+
+            <!-- Add More Courses (Total 10) -->
+            <!-- Course 5-10 -->
+            
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
